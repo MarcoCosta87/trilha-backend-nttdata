@@ -1,22 +1,51 @@
 package entity;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "lancamentos")
 public class Lancamento {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Long id;
+
+	@Column(name = "name")
 	private String name;
+
+	@Column(name = "description")
 	private String description;
+
+	@Column(name = "type")
 	private String type;
+
+	@Column(name = "amount")
 	private String amount;
+
+	@Column(name = "date")
 	private String date;
+
+	@Column(name = "paid")
 	private boolean paid;
-	private Long categoryId;
+
+	@ManyToOne
+	@JoinColumn(name = "categoriaId", referencedColumnName = "id")
+	private Categoria categoriaId;
 
 	public Lancamento() {
-		super();
+
 	}
 
 	public Lancamento(Long id, String name, String description, String type, String amount, String date, boolean paid,
-			Long categoryId) {
+			Categoria categoriaId) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -25,25 +54,8 @@ public class Lancamento {
 		this.amount = amount;
 		this.date = date;
 		this.paid = paid;
-		this.categoryId = categoryId;
-	}
 
-	public void despesa() {
-	}
-
-	public void receita() {
-	}
-
-	public void pago() {
-	}
-
-	public void pendente() {
-	}
-
-	public void dataDoAcontecimento() {
-	}
-
-	public void valor() {
+		this.categoriaId = categoriaId;
 	}
 
 	public Long getId() {
@@ -102,19 +114,20 @@ public class Lancamento {
 		this.paid = paid;
 	}
 
-	public long getCategoryId() {
-		return categoryId;
+	public Categoria getCategoriaId() {
+		return categoriaId;
 	}
 
-	public void setCategoryId(Long categoryId) {
-		this.categoryId = categoryId;
+	public void setCategoriaId(Categoria categoriaId) {
+		this.categoriaId = categoriaId;
 	}
 
 	@Override
 	public String toString() {
-		return "Lançamento [id = " + id + ", name = " + name + ", description = " + description + ", type = " + type
-				+ ", amount = " + amount + ", date = " + date + ", paid = " + paid + ", categoryId = " + categoryId
-				+ "]";
+		return "Lancamento [id=" + id + ", name=" + name + ", description=" + description + ", type=" + type
+				+ ", amount=" + amount + ", date=" + date + ", paid=" + paid + ", categoriaId=" + categoriaId + "]";
 	}
+
+	
 	
 }

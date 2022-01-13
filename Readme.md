@@ -249,3 +249,34 @@ WSDL para um serviço da web baseado em SOAP. O documento do swagger especifica 
 que estão disponiveis na API REST e as operações que podem ser chamadas de recursos. Os documentos 
 swagger devem estar em qualquer formato **JSON** com uma extensão de arquivos **.jason ou formato** 
 **YAML** com uma extensão de arquivos **.yaml ou .yml**.
+
+# 📝Desafio 4 
+
+## 📑 O papel da camada de persistêntcia, abstração da linguagem dos
+### bancos de dados criada pelas ferramentas de ORM .
+
+### ✔ JDBC :
+É uma **API** que reúne conjuntos  de classes e interfaces escritas na linguagem java que possibilita conectar **drives** específicos do banco de dados desejados. Todos os principais bancos de dados do mercado  possuem **drives jdbc** para que você possa utilizá-los com java. Para abrir uma conecxão com um banco de dados precisamos sempre utiliazar um drive.
+
+### ✔ ORM :
+Técnica utilizada para converter dados entre bancos de dados relacionais e linguagens orientadas ao objeto. Com a técnica o programador não precisa se preucopar com os comados em linguagem**SQL**; ele ira usar uma interface  de programação simples que faz todo o trabalho de persistência. A forma de como este mapeamento é configurado depende da ferramenta utilizando , exemplo: hibernate java . Em outros casos o mapeamento e feito diretamente no código atraves de herança de classes especias ,exemplo no **Django** , **SQLAlchemy** e na **linguagem Python**.
+
+**Exemplo de ORM**: Hibernate, NHibernate, Entity Framework e etc.
+
+### ✔ JPA :
+**Java Persistence Api** JPA descreve o comportamento dos fremeworks de persistências java na qual deseja implementá-la. Jpa não possui codigo que possa ser execultado. Como interface que possui algumas assinaturas, mas que precisam ser implementadas, possui algumas classes interfaces e anotações que ajudam o desenvolvedor a abstrair o código.
+
+Sua Realação com **fremework ORM**, ou seja, a implementação física do que você usará para **persistir**,**remover**, **atualizar** ou **buscar dados no SGBD**. por outro lado, o **JPA** é uma camada que descreve uma interface comum para frameworks ORM. Você pode desenvolver todo seu sistemas JPA, apenas com Hibernate ou qualquer outro framework ORM.
+
+### ✔ SPRING DATA :
+ Fremework java que tem grande aceitação na area de desenvolvimento de sistemas. Ele provê ferramentas que facilitam o desenvolvimento das classes que contêm as operações de CRUD, tanto com 
+ o uso de JDBC puro, tanto como algumas frameworks de mapeamento relacional(ORM).
+
+### ✔ CRUD:
+Nas manipulações de registro realizados diretamente em banco de dados ou em plataformas desenvolvidas no padrão **RESTful**, o conceito **CRUD** estabelece o modelo correto no manuseio desses dados .
+É basicamente uma tabela de cadastro, com operações em bancos de dados, não e bem assim, a sigla surgiu a partir das 4 operações básicas de um banco de dados, Insert, Select, Update e Delete. A sigla é acrônima, de quatro operações básicas  principais realizadas em bancos de dados, seja no **modelo relacional (SQL)** ou **não relacional (NoSQL)**, facilitando no processamento de dados,  são elas :
+
+-**C: Create** - Criar um novo registro.
+-**R: Read** - Ler um registro, ou um conjunto de registros.
+-**U: Update** - Atualizar um registro.
+-**D: Delete** - Excluir um registro.
