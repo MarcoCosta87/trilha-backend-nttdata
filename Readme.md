@@ -1,9 +1,9 @@
 # Cybertron 
 # 📝Desafio 1 
 
-# 📑Sobre VCS (Sistema de controle de versão)
+## 📑Sobre VCS (Sistema de controle de versão)
 
-# ✔ Definição :
+### ✔ Definição :
 
 Os **sistemas de controle de versão** são ferramentas de software que ajudam
 as equipes de software a gerenciar as alterações ao código-fonte ao longo
@@ -16,7 +16,7 @@ incluir outros requisitos, finalidades especificas, layout e afins sem
 mexer no projeto principal ou resgatar o sistema em um ponto que estava 
 estável, isso tudo sem mexer na versão principal.
 
-# ✔ Vantagens :
+### ✔ Vantagens :
 
 **Controle do histórico**: facilidade em desfazer e possibilidade de analisar
 o histórico do desenvolvimento, como também facilidade no resgate de 
@@ -38,7 +38,7 @@ usuário possa se embasar do arquivo que deseja utilizar.
 **Organização**: Alguns softwares disponibilizam uma interface visual onde podem
 ser vistos todos os arquivos controlados, desde a origem até o projeto por completo.
 
-# ✔ Exemplos (VCS) :
+### ✔ Exemplos (VCS) :
 
 A **CVS** é uma das ferramentas de controle de software mais antigas no mercado.
 A primeira versão dela foi desenvolvida em 1968. Essa ferramenta possui como maior
@@ -54,11 +54,13 @@ por meio de SCRUM ou CMMI.
 O **GIT** é uma das ferramentas de controle de versão de software mais populares, 
 principalmente em projetos open source. Isso se deve, principalmente, pela popularidade
 do GitHub, uma plataforma para hospedagem de códigos. Apesar de ela poder ser utilizada
-em outras ferramentas, o GIT é a que ganhou mais repercussão nesse aspecto. 📝Desafio 2 
+em outras ferramentas, o GIT é a que ganhou mais repercussão nesse aspecto. 
 
-# 📑Sobre Programação orientada a objeto (POO)
+## 📝Desafio 2 
 
-# ✔ Definição :
+## 📑Sobre Programação orientada a objeto (POO)
+
+### ✔ Definição :
 A **programação orientada a objeto** e uma essência do java. A metodologia orientada a
 objeto é inseparavel da linguagem, e todos os programas de java são pelo meno ate um
 certo ponto, orientados a objeto devido a importacia do oop para o java.
@@ -70,9 +72,9 @@ pode ser aplicado a esses dados. Para dar suporte aos principios da programaçã
 orientada objeto, todas as linguagens oop, inclusive java, têm três características
 em comum : abstração, encapsulamento, polimorfismo e herança.
 
-# **Pilares**
+### **Pilares**
 
-# ✔ Abstração :
+### ✔ Abstração :
 O processo de abstração em java é usado para ocultar detalhes e mostrar apenas recursos 
 essenciais do objeto. tranyando de uma visão externa de um objeto(interface).Tudo que não
 sabemos como funciona por baixo dos panos pode ser consideradouma abstração.
@@ -96,7 +98,7 @@ sabemos como funciona por baixo dos panos pode ser consideradouma abstração.
                      System.out.println("Saldo: "+this.saldo);
                      }
 
-# ✔ Encapsulamento : 
+### ✔ Encapsulamento : 
 O encapsulamento é o mecanismo de programação que vincula o codigo e os dados que ele
 trata, e isso mantém os dois seguros contra a interferencia e ma utilização externa.Em
 uma linguagem orientada a objetos, o código e os dados podem ser vinculados de tal forma
@@ -126,7 +128,7 @@ necessarios.
                         }
 
 
-# ✔ Polimorfismo :
+### ✔ Polimorfismo :
 É a qualidade que permite que uma interface acesse uma classe geral de ações. A ação 
 especifica é determinada pela natureza exata da situação.classes e seus objetos encapsulam,
 isto é, contêm seus atributos e métodos. Os atributos e metódos de uma classe (e de seus
@@ -150,7 +152,7 @@ em geral não sabem como outros objetos são implementados.
              }
 
 
-# ✔ Herança :
+### ✔ Herança :
 É o processo pela qual um objeto pode adquirir as prioridades de outro objetivo. Isso é importante
 porque dá suporte ao conceito de classificação hierárquica.se voce pensar bem, grande parte 
 do conhecimento pode ser gerenciada por classificação hierarquica. O objeto pode ser criada
@@ -179,14 +181,71 @@ próprios.
                       }
                    }
 
-# ✔ 5 vantagens de Poo :
+### ✔ 5 vantagens de Poo :
 
-  ##   ✔ **POO permite que você represente melhor o mundo real em seus programas**.tudo no mundo pode ser descrito como um conjuntode propriedade e ações.
+  -   ✔ **POO permite que você represente melhor o mundo real em seus programas**.tudo no mundo pode ser descrito como um conjuntode propriedade e ações.
 
-  ##   ✔ **Os programas POO são fáceis de ler e entender**. como você não precisa escrever as propriedadese ações para cada personagem ou sprite.
+  -   ✔ **Os programas POO são fáceis de ler e entender**. como você não precisa escrever as propriedadese ações para cada personagem ou sprite.
 
-  ##  ✔ **Pode se mais rápido programar com POO**. POO facilita a reutilização de objetos em outros programas.
+  -  ✔ **Pode se mais rápido programar com POO**. POO facilita a reutilização de objetos em outros programas.
 
-  ##  ✔ **É mais facil criar programas**. como a POO te ajuda a eliminar o código desnecessário, é mais fácil criar programas maiores e complexos.
+  -  ✔ **É mais facil criar programas**. como a POO te ajuda a eliminar o código desnecessário, é mais fácil criar programas maiores e complexos.
 
-  ##   ✔ **Como os objetivos são autônomos, os programas em POO são mais fáceis de depurar**.
+ -   ✔ **Como os objetivos são autônomos, os programas em POO são mais fáceis de depurar**.
+  
+### 📝Desafio 3 
+
+## 📑Sobre HTTP (Potocolo de comunicação)
+ 
+Os **protocolos de comunicação** são intruções , regulamentos ou regras que orientam uma 
+ação ou estabelecem certas base para o desenvolvimento de um procedimento . A comunicação,
+por sua vez, é uma noção de multiplos usos que, em geral, é utilizada para nomear a difusão 
+e recepção de mensagens. O **HTTP** funciona como um protocolo de requisição-resposta no modelo
+computacional cliente-servidor. 
+
+**Rest** é um estilo de arquitetura .Ele fornece padrões para comunicação entre sistemas.REST
+não é um padrão exclusivo para HTTP. Embora as bases do Rest e do HTTP sejam as mesmas. Na 
+arquitetura Rest, os clientes enviam solicitações para recuperar ou modificar recursos e os 
+servidores enviam respostas para essas solicitações. 
+**Relação** entre HTTP e Rest , é o caminho mais conhecido nas transferencias de dados. 
+A maioria das Apis **RESTfull** uilizam o HTTP como protocolo de comunicação oficial, uma
+vez que apresenta uma interface de operação padronizada. O HTTP permite criar, atualizar,
+pesquisar,executar e remover operações atuando sobree determinados recursos.
+
+**Web API** é uma interface programatica que consiste de um ou mais endpoints publicamente
+ expostos para um sistema definido de mensagens pedido- resposta, tipicamente expresado em
+  **JSON** ou **XML** exposto via internet por meio de um serviodr web baseado em HTTP.
+
+### Verbos (Métodos) HTTP ;
+
+### **GET**: 
+É usado para ler ou recuperar uma representação de um recurso. Em caso de sucesso retorna 
+uma representação JSON e o status HTTP 200 ok.
+    retorna uma lista de usuario ;
+
+### **POST**; 
+Utilizado para criar novos recursos. o seu retorno de status HTTP 201.
+    insere um novo ususario ;
+
+### **DELETE**; 
+Ele é usado para excluir um recurso identificado pela url. na exclusão bem
+sucedida devolve status HTTP 200 ok.
+    remove um usuario via "id" ;
+
+### **PUT**; 
+Utilizado para susbstituir (ou atualizar) recursos, executando a requisição para uma url
+de recuso conhecido. uma atualização bem sucedida
+retorna um status HTTP 200 ou 204 se não retorno um conteúdo do corpo. 
+    Substitui os dados do ususario com "id" ;
+
+### **PATCH**; 
+Serve para altera ou modificar um recurso especifico não o recurso completo .
+   Altera itens dos dados do usuario com "id" ;
+
+### Swagger 
+
+O swagger é uma especificação aberta para definição de **APIs REST**. Equivalente de um documento
+WSDL para um serviço da web baseado em SOAP. O documento do swagger especifica a lista de recurso
+que estão disponiveis na API REST e as operações que podem ser chamadas de recursos. Os documentos 
+swagger devem estar em qualquer formato **JSON** com uma extensão de arquivos **.jason ou formato** 
+**YAML** com uma extensão de arquivos **.yaml ou .yml**.
