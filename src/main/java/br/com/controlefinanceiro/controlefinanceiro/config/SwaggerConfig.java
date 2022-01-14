@@ -1,4 +1,4 @@
-package config;
+package br.com.controlefinanceiro.controlefinanceiro.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,7 @@ public class SwaggerConfig {
 	    public Docket api() {
 	        return new Docket(DocumentationType.SWAGGER_2)
 	          .select()
-	          .apis(RequestHandlerSelectors.basePackage("controller"))
+	          .apis(RequestHandlerSelectors.basePackage("br.com.controlefinanceiro.controlefinanceiro.controller"))
 	          .paths(PathSelectors.any())
 	          .build();
 	    }	

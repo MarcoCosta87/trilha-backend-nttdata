@@ -1,4 +1,4 @@
-package entity;
+package br.com.controlefinanceiro.controlefinanceiro.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

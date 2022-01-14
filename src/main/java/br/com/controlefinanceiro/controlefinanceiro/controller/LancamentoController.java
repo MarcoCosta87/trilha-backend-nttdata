@@ -1,4 +1,4 @@
-package controller;
+package br.com.controlefinanceiro.controlefinanceiro.controller;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import entity.Lancamento;
-import repository.LancamentoRepository;
+import br.com.controlefinanceiro.controlefinanceiro.entity.Lancamento;
+import br.com.controlefinanceiro.controlefinanceiro.repository.LancamentoRepository;
 
 @RestController
 @RequestMapping("/Lancamento")

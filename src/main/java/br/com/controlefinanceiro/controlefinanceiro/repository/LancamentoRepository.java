@@ -1,10 +1,10 @@
-package repository;
+package br.com.controlefinanceiro.controlefinanceiro.repository;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import entity.Lancamento;
+import br.com.controlefinanceiro.controlefinanceiro.entity.Lancamento;
 
 
 

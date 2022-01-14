@@ -1,4 +1,4 @@
-package controller;
+package br.com.controlefinanceiro.controlefinanceiro.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import entity.Categoria;
-import repository.CategoriaRepository;
+import br.com.controlefinanceiro.controlefinanceiro.entity.Categoria;
+import br.com.controlefinanceiro.controlefinanceiro.repository.CategoriaRepository;
 
 @RestController
 @RequestMapping("/Categoria")
