@@ -25,7 +25,7 @@ public class EntryController {
 	@Autowired
 	private EntryService entryService;
 
-	@PostMapping("/Criar")
+	@PostMapping
 	public ResponseEntity<Entry> create(@RequestBody Entry entry) {
 		entry = entryService.criar(entry);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(entry.getId()).toUri();
@@ -38,27 +38,27 @@ public class EntryController {
 		return ResponseEntity.created(uri).body(entry);
 	}
 
-	@GetMapping("/Ler")
+	@GetMapping
 	public ResponseEntity<List<Entry>> findAllEntry() {
 		List<Entry> list = entryService.findAllEntry();
 		return ResponseEntity.ok().body(list);
 	}
 
-	@GetMapping("/Ler/{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<Entry> findById(@PathVariable("id") Long id) {
 		Entry entry = entryService.findById(id);
 		return ResponseEntity.ok(entry);
 
 	}
 
-	@PutMapping("/updated/{id}")
+	@PutMapping("/{id}")
 	public ResponseEntity<Entry> updated(@PathVariable Long id, @RequestBody Entry entry) {
 		entry = entryService.updated(id, entry);
 		return ResponseEntity.ok().body(entry);
 
 	}
 
-	@DeleteMapping("/Deletar/{id}")
+	@DeleteMapping("/{id}")
 	public ResponseEntity<Entry> deletar(@PathVariable Long id) {
 		entryService.deletar(id);
 		return ResponseEntity.noContent().build();

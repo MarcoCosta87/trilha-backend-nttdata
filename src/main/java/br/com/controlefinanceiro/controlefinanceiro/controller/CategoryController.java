@@ -19,13 +19,13 @@ import br.com.controlefinanceiro.controlefinanceiro.entity.Category;
 import br.com.controlefinanceiro.service.CategoryService;
 
 @RestController
-@RequestMapping("/Category")
+@RequestMapping("/Categorias")
 public class CategoryController {
 
 	@Autowired
 	private CategoryService categoryService;
 
-	@PostMapping("/Criar")
+	@PostMapping
 	public ResponseEntity<Category> criarCategory(@RequestBody Category category) {
 		category = categoryService.criarCategory(category);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(category.getId())
@@ -33,27 +33,27 @@ public class CategoryController {
 		return ResponseEntity.created(uri).body(category);
 	}
 
-	@GetMapping("Ler")
+	@GetMapping
 	public ResponseEntity<List<Category>> findAllCategory() {
 		List<Category> list = categoryService.findAllCategory();
 		return ResponseEntity.ok().body(list);
 	}
 
-	@GetMapping("/Ler/{id}")
+	@GetMapping("{id}")
 	public ResponseEntity<Category> findById(@PathVariable("id") Long id) {
 		Category category = categoryService.findById(id);
 		return ResponseEntity.ok(category);
 
 	}
 
-	@PutMapping("/updated/{id}")
+	@PutMapping("/{id}")
 	public ResponseEntity<Category> updated(@PathVariable Long id, @RequestBody Category category) {
 		category = categoryService.updated(id, category);
 		return ResponseEntity.ok().body(category);
 
 	}
 
-	@DeleteMapping("/Deletar/{id}")
+	@DeleteMapping("/{id}")
 	public ResponseEntity<Category> deletar(@PathVariable Long id) {
 		categoryService.deletar(id);
 		return ResponseEntity.noContent().build();
