@@ -19,7 +19,7 @@ import br.com.controlefinanceiro.controlefinanceiro.entity.Entry;
 import br.com.controlefinanceiro.service.EntryService;
 
 @RestController
-@RequestMapping("/Entry")
+@RequestMapping("/entry")
 public class EntryController {
 	
 	@Autowired

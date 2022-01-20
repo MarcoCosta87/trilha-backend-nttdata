@@ -19,7 +19,7 @@ import br.com.controlefinanceiro.controlefinanceiro.entity.Category;
 import br.com.controlefinanceiro.service.CategoryService;
 
 @RestController
-@RequestMapping("/Categorias")
+@RequestMapping("/categorias")
 public class CategoryController {
 
 	@Autowired
