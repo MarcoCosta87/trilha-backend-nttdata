@@ -1,4 +1,4 @@
-package br.com.controlefinanceiro.controlefinanceiro.entity;
+package br.com.controlefinanceiro.entity;
 
 import java.util.List;
 

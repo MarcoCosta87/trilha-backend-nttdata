@@ -6,10 +6,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.controlefinanceiro.controlefinanceiro.entity.Category;
-import br.com.controlefinanceiro.controlefinanceiro.entity.Entry;
-import br.com.controlefinanceiro.controlefinanceiro.repository.CategoryRepository;
-import br.com.controlefinanceiro.controlefinanceiro.repository.EntryRepository;
+import br.com.controlefinanceiro.entity.Category;
+import br.com.controlefinanceiro.entity.Entry;
+import br.com.controlefinanceiro.repository.CategoryRepository;
+import br.com.controlefinanceiro.repository.EntryRepository;
 
 
 
