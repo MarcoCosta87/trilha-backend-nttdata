@@ -30,4 +30,10 @@ public class CategoryDto {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+<<<<<<< HEAD
+=======
+	
+	
+
+>>>>>>> 0c262b4c50409d44678465287d27c3ba706ff686
 }
