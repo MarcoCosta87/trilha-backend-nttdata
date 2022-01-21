@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "lancamentos")
+@Table(name = "Entry")
 public class Entry {
 
 	@Id
@@ -38,7 +38,7 @@ public class Entry {
 
 	@ManyToOne
 	@JoinColumn(name = "categoryId", referencedColumnName = "id")
-	private Category  categoryId;
+	private Category categoryId;
 
 	public Entry() {
 
@@ -54,8 +54,7 @@ public class Entry {
 		this.amount = amount;
 		this.date = date;
 		this.paid = paid;
-
-		this. categoryId =  categoryId;
+		this.categoryId = categoryId;
 	}
 
 	public Long getId() {
@@ -115,19 +114,17 @@ public class Entry {
 	}
 
 	public Category getCategoryId() {
-		return  categoryId;
+		return categoryId;
 	}
 
-	public void setCategoryId(Category  categoryId) {
-		this. categoryId =  categoryId;
+	public void setCategoryId(Category categoryId) {
+		this.categoryId = categoryId;
 	}
 
 	@Override
 	public String toString() {
-		return "Lancamento [id=" + id + ", name=" + name + ", description=" + description + ", type=" + type
-				+ ", amount=" + amount + ", date=" + date + ", paid=" + paid + ",  categoryId=" +  categoryId + "]";
+		return "Entry [id=" + id + ", name=" + name + ", description=" + description + ", type=" + type + ", amount="
+				+ amount + ", date=" + date + ", paid=" + paid + ", categoryId=" + categoryId + "]";
 	}
 
-	
-	
 }

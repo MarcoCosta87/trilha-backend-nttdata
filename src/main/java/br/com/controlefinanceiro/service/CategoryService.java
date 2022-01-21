@@ -1,11 +1,14 @@
 package br.com.controlefinanceiro.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.controlefinanceiro.dto.CategoryDto;
 import br.com.controlefinanceiro.entity.Category;
 import br.com.controlefinanceiro.repository.CategoryRepository;
 
@@ -16,6 +19,14 @@ public class CategoryService {
 
 	@Autowired
 	private CategoryRepository categoryRepository;
+	
+	private ModelMapper modelMapper;
+	
+	private List<CategoryDto> categoryListDto = new ArrayList<>();
+	
+	public CategoryService(CategoryRepository categoryRepository) {
+		 this.categoryRepository = categoryRepository;
+	}
 
 	public Long idCategoryfindByName(Category name) {
 

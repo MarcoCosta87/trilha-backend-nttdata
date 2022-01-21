@@ -15,13 +15,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import br.com.controlefinanceiro.dto.EntryDto;
 import br.com.controlefinanceiro.entity.Entry;
 import br.com.controlefinanceiro.service.EntryService;
 
 @RestController
 @RequestMapping("/entries")
 public class EntryController {
-	
+
 	@Autowired
 	private EntryService entryService;
 
@@ -50,7 +51,12 @@ public class EntryController {
 		return ResponseEntity.ok(entry);
 
 	}
-
+	@GetMapping("/resumo")
+	public List<EntryDto> resumoListDto() {		
+		return entryService.resumoListDto();
+	
+	}
+	
 	@PutMapping("/{id}")
 	public ResponseEntity<Entry> updated(@PathVariable Long id, @RequestBody Entry entry) {
 		entry = entryService.updated(id, entry);

@@ -1,17 +1,19 @@
 package br.com.controlefinanceiro.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import br.com.controlefinanceiro.dto.EntryDto;
 import br.com.controlefinanceiro.entity.Category;
 import br.com.controlefinanceiro.entity.Entry;
 import br.com.controlefinanceiro.repository.CategoryRepository;
 import br.com.controlefinanceiro.repository.EntryRepository;
-
-
 
 @Service
 public class EntryService {
@@ -20,6 +22,10 @@ public class EntryService {
 	private EntryRepository entryRepository;
 	@Autowired
 	private CategoryRepository categoryRepository;
+
+	private ModelMapper modelMapper;
+
+	private List<EntryDto> entryDtoList = new ArrayList<>();
 
 	public boolean validateCategoryById(Category IdCategory) {
 
@@ -66,6 +72,18 @@ public class EntryService {
 
 	public void deletar(Long id) {
 		entryRepository.deleteById(id);
+	}
+
+	public List<EntryDto> resumoListDto() {
+		List<Entry> listEntry = entryRepository.findAll();
+		for (Entry entryCategory : listEntry) {
+			entryCategory.getCategoryId();
+		}
+		return listEntry.stream().map(this::mapToDto).collect(Collectors.toList());
+	}
+
+	private EntryDto mapToDto(Entry entry) {
+		return modelMapper.map(entry, EntryDto.class);
 	}
 
 }
