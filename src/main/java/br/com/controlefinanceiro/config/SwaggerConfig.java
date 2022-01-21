@@ -1,4 +1,4 @@
-package br.com.controlefinanceiro.controlefinanceiro.config;
+package br.com.controlefinanceiro.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

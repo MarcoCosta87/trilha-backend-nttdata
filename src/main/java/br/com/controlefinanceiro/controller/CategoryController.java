@@ -1,4 +1,4 @@
-package br.com.controlefinanceiro.controlefinanceiro.controller;
+package br.com.controlefinanceiro.controller;
 
 import java.net.URI;
 import java.util.List;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import br.com.controlefinanceiro.controlefinanceiro.entity.Category;
+import br.com.controlefinanceiro.entity.Category;
 import br.com.controlefinanceiro.service.CategoryService;
 
 @RestController

@@ -17,6 +17,16 @@ public class EntryDto {
 	public EntryDto() {
 	}
 
+	public EntryDto(String name, String description, String type, String amount, String date, boolean paid) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.type = type;
+		this.amount = amount;
+		this.date = date;
+		this.paid = paid;
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -65,5 +75,4 @@ public class EntryDto {
 		this.paid = paid;
 	}
 
-	
 }

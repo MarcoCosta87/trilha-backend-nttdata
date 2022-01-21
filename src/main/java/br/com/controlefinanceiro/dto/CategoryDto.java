@@ -10,7 +10,7 @@ public class CategoryDto {
 	}
 
 	public CategoryDto(String name, String description) {
-		super();
+		
 		this.name = name;
 		this.description = description;
 	}
