@@ -44,7 +44,6 @@ public class EntryService {
 
 	public List<Entry> findAllEntry() {
 		return entryRepository.findAll();
-
 	}
 
 	public Entry findById(Long id) {
@@ -66,7 +65,7 @@ public class EntryService {
 		entry1.setAmount(entry.getAmount());
 		entry1.setDate(entry.getDate());
 		entry1.setPaid(entry.isPaid());
-		entry1.setCategoryId(entry.getCategoryId());
+		entry1.setCategoryId(entry.getCategory());
 
 	}
 
@@ -74,16 +73,51 @@ public class EntryService {
 		entryRepository.deleteById(id);
 	}
 
-	public List<EntryDto> resumoListDto() {
-		List<Entry> listEntry = entryRepository.findAll();
-		for (Entry entryCategory : listEntry) {
-			entryCategory.getCategoryId();
+	public List<Entry> resumoListDto() {
+		List<Entry> listRepository = entryRepository.findAll();
+		List<Entry> listResumo = new ArrayList<>();
+
+		// percorrer a lista repositry
+		for (Entry item1 : listRepository) {
+			System.out.println("for lista repository");
+			System.out.println(item1);
+
+			Boolean validacaoLista = false;
+			// percorrer na listaresumo se existe obj da categpria
+			for (Entry obj1 : listResumo) {
+				System.out.println("for dalista resumo");
+				System.out.println(obj1);
+				// se existir adicinar o item add.
+				if (item1.getCategory().getId().equals(obj1.getCategory().getId())) {
+					System.out.println("if foi verdadeiro");
+					validacaoLista = true;
+				}
+			}
+			if (validacaoLista) {
+				// adicioar o amount,
+				for (Entry obj1 : listResumo) {
+					System.out.println("for dalista resumo");
+					System.out.println(obj1);
+					// se existir adicinar o item add.
+					if (item1.getCategory().getId().equals(obj1.getCategory().getId())) {
+						System.out.println("if foi verdadeiro");
+						obj1.setAmount(obj1.getAmount() + item1.getAmount());
+					} else {
+						listResumo.add(item1);
+					}
+
+				}
+
+			}
 		}
-		return listEntry.stream().map(this::mapToDto).collect(Collectors.toList());
+		return listResumo;
 	}
 
 	private EntryDto mapToDto(Entry entry) {
 		return modelMapper.map(entry, EntryDto.class);
 	}
 
+	private Entry mapToEntity(EntryDto entryDto) {
+		return modelMapper.map(entryDto, Entry.class);
+	}
 }

@@ -29,7 +29,7 @@ public class Category {
 	private String description;
 
 	@JsonIgnore
-	@OneToMany(mappedBy = "categoryId", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
 	private List<Entry> entry;
 
 	public Category() {

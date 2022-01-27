@@ -30,7 +30,7 @@ public class EntryController {
 	public ResponseEntity<Entry> create(@RequestBody Entry entry) {
 		entry = entryService.criar(entry);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(entry.getId()).toUri();
-		if (entryService.validateCategoryById(entry.getCategoryId())) {
+		if (entryService.validateCategoryById(entry.getCategory())) {
 
 		} else {
 			System.out.println("categoria inexistente!!!!");
@@ -52,7 +52,7 @@ public class EntryController {
 
 	}
 	@GetMapping("/resumo")
-	public List<EntryDto> resumoListDto() {		
+	public List<Entry> resumoListDto() {		
 		return entryService.resumoListDto();
 	
 	}

@@ -38,14 +38,14 @@ public class Entry {
 
 	@ManyToOne
 	@JoinColumn(name = "categoryId", referencedColumnName = "id")
-	private Category categoryId;
+	private Category category;
 
 	public Entry() {
 
 	}
 
 	public Entry(Long id, String name, String description, String type, String amount, String date, boolean paid,
-			Category categoryId) {
+			Category category) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -54,7 +54,7 @@ public class Entry {
 		this.amount = amount;
 		this.date = date;
 		this.paid = paid;
-		this.categoryId = categoryId;
+		this.category = category;
 	}
 
 	public Long getId() {
@@ -113,18 +113,18 @@ public class Entry {
 		this.paid = paid;
 	}
 
-	public Category getCategoryId() {
-		return categoryId;
+	public Category getCategory() {
+		return category;
 	}
 
 	public void setCategoryId(Category categoryId) {
-		this.categoryId = categoryId;
+		this.category = categoryId;
 	}
 
 	@Override
 	public String toString() {
 		return "Entry [id=" + id + ", name=" + name + ", description=" + description + ", type=" + type + ", amount="
-				+ amount + ", date=" + date + ", paid=" + paid + ", categoryId=" + categoryId + "]";
+				+ amount + ", date=" + date + ", paid=" + paid + ", category=" + category + "]";
 	}
 
 }
