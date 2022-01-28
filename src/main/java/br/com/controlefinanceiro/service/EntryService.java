@@ -74,45 +74,35 @@ public class EntryService {
 	}
 
 	public List<Entry> resumoListDto() {
-		List<Entry> listRepository = entryRepository.findAll();
-		List<Entry> listResumo = new ArrayList<>();
+        List<Entry> listRepository = entryRepository.findAll();
+        List<Entry> listResumo = new ArrayList<>();//        
 
-		// percorrer a lista repositry
-		for (Entry item1 : listRepository) {
-			System.out.println("for lista repository");
-			System.out.println(item1);
-
-			Boolean validacaoLista = false;
-			// percorrer na listaresumo se existe obj da categpria
-			for (Entry obj1 : listResumo) {
-				System.out.println("for dalista resumo");
-				System.out.println(obj1);
-				// se existir adicinar o item add.
-				if (item1.getCategory().getId().equals(obj1.getCategory().getId())) {
-					System.out.println("if foi verdadeiro");
-					validacaoLista = true;
-				}
-			}
-			if (validacaoLista) {
-				// adicioar o amount,
-				for (Entry obj1 : listResumo) {
-					System.out.println("for dalista resumo");
-					System.out.println(obj1);
-					// se existir adicinar o item add.
-					if (item1.getCategory().getId().equals(obj1.getCategory().getId())) {
-						System.out.println("if foi verdadeiro");
-						obj1.setAmount(obj1.getAmount() + item1.getAmount());
-					} else {
-						listResumo.add(item1);
-					}
-
-				}
-
-			}
-		}
-		return listResumo;
-	}
-
+        // percorrer a lista repositry
+        for (Entry item1 : listRepository) {           
+            Boolean validacaoLista = false;
+            // percorrer na listaresumo se existe obj da categpria
+            for (Entry obj1 : listResumo) {                
+                // se existir adicinar o item add.
+                if (item1.getCategory().getId().equals(obj1.getCategory().getId())) {
+                    System.out.println("if foi verdadeiro");
+                    validacaoLista = true;
+                }
+            }
+            if (validacaoLista) {
+                // adicioar o amount,
+                for (Entry obj1 : listResumo) {                    
+                    // se existir adicinar o item add.
+                    if (item1.getCategory().getId().equals(obj1.getCategory().getId())) {
+                        System.out.println("if foi verdadeiro");
+                        obj1.setAmount(obj1.getAmount() + item1.getAmount());
+                    }
+                }
+            }else {
+                    listResumo.add(item1);
+            }
+        }
+        return listResumo;
+    }
 	private EntryDto mapToDto(Entry entry) {
 		return modelMapper.map(entry, EntryDto.class);
 	}

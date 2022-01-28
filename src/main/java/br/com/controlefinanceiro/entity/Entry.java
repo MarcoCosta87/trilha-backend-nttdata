@@ -28,7 +28,7 @@ public class Entry {
 	private String type;
 
 	@Column(name = "amount")
-	private String amount;
+	private double amount;
 
 	@Column(name = "date")
 	private String date;
@@ -44,7 +44,7 @@ public class Entry {
 
 	}
 
-	public Entry(Long id, String name, String description, String type, String amount, String date, boolean paid,
+	public Entry(Long id, String name, String description, String type, double amount, String date, boolean paid,
 			Category category) {
 		super();
 		this.id = id;
@@ -89,11 +89,11 @@ public class Entry {
 		this.type = type;
 	}
 
-	public String getAmount() {
+	public double getAmount() {
 		return amount;
 	}
 
-	public void setAmount(String amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 

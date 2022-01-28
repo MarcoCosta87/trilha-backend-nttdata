@@ -8,7 +8,7 @@ public class EntryDto {
 
 	private String type;
 
-	private String amount;
+	private double amount;
 
 	private String date;
 
@@ -17,7 +17,7 @@ public class EntryDto {
 	public EntryDto() {
 	}
 
-	public EntryDto(String name, String description, String type, String amount, String date, boolean paid) {
+	public EntryDto(String name, String description, String type, double amount, String date, boolean paid) {
 		super();
 		this.name = name;
 		this.description = description;
@@ -51,11 +51,11 @@ public class EntryDto {
 		this.type = type;
 	}
 
-	public String getAmount() {
+	public double getAmount() {
 		return amount;
 	}
 
-	public void setAmount(String amount) {
+	public void setAmount(double amount) {
 		this.amount = amount;
 	}
 
