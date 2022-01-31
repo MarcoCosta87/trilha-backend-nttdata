@@ -1,78 +1,38 @@
 package br.com.controlefinanceiro.dto;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class EntryDto {
-
+	@NotBlank(message = "Campo nome não informado")
+    @Min(value = 3) @Max(value = 45)
 	private String name;
-
+	
+	@NotBlank(message = "Campo description não informado")
+    @Min(value = 15) @Max(value = 150)
 	private String description;
-
+	
+	@NotBlank(message = "Campo type não informado")
+    @Min(value = 3) @Max(value = 10)
 	private String type;
-
+	
+	@NotBlank(message = "Campo amount não informado")
 	private double amount;
-
+	
+	@NotBlank(message = "Campo date não informado")
 	private String date;
-
+	
+	@NotBlank(message = "Campo paid não informado")
 	private boolean paid;
 
-	public EntryDto() {
-	}
-
-	public EntryDto(String name, String description, String type, double amount, String date, boolean paid) {
-		super();
-		this.name = name;
-		this.description = description;
-		this.type = type;
-		this.amount = amount;
-		this.date = date;
-		this.paid = paid;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(double amount) {
-		this.amount = amount;
-	}
-
-	public String getDate() {
-		return date;
-	}
-
-	public void setDate(String date) {
-		this.date = date;
-	}
-
-	public boolean isPaid() {
-		return paid;
-	}
-
-	public void setPaid(boolean paid) {
-		this.paid = paid;
-	}
+	
 
 }
